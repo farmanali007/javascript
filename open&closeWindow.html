@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openWindow()">open window</button>
+    <button onclick="moveToWindow()">moveTo window</button>
+    <button onclick="moveByWindow()">moveBy window</button>
+    <button onclick="resizeToWindow()">ResizeTo window</button>
+    <button onclick="resizeByWindow()">ResizeBy window</button>
+    <button onclick="closeWindow()">close window</button>
+    <script>
+        var mywindow;
+        function openWindow(){
+            // mywindow=window.open("http://www.yahoobaba.net","","width=500px ,height=200px");
+            mywindow=window.open("","","width=200px ,height=200px");
+            mywindow.document.write("<p>This is para.</p>");
+        }
+        function closeWindow(){
+            mywindow.close();
+        }
+        function moveToWindow(){
+            mywindow.moveTo(200,200);
+        }
+        function moveByWindow(){
+            mywindow.moveBy(200,200);
+        }
+        function resizeToWindow(){
+            mywindow.resizeTo(400,400);
+        }
+        function resizeByWindow(){
+            mywindow.resizeBy(200,200);
+        }
+    </script>
+
+
+</body>
+</html>

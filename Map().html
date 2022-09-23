@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fruits = new Map([["oranges",500],["apples",300],["bananas",570]]);
+        fruits.set("grapes",342);//set elements key+value
+        fruits.set("pineapple",343);
+        document.write(fruits.size+ "<br>");//print size of Map
+        document.write(fruits.get("oranges")+"<br>");//get element value
+        document.write(fruits.has("oranges")+"<br>");//for search element by value in Map 
+        fruits.delete("oranges");//for delete element by value in Map 
+        document.write(fruits.has("orange")+"<br>");//return false because we delete the orange above from map by using delete() Method
+        document.write(fruits.has("grapes")+"<br>");//return true because we add the grapes by using set method
+
+
+
+
+
+
+
+
+        //////////////////forEach() Method/////////////
+          fruits.forEach(function(value,key){
+              document.write(key + "=" + value + "<br>");
+
+          })
+
+        //////////////////entries() Method/////////////
+             for(let x of fruits.entries()){
+                     document.write(x+ "<br>");
+             }
+    </script>
+</body>
+</html>

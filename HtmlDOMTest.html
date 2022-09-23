@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <form id="frm1" action="/action.php">
+      First Name: <input type="text" name="fname" value="Farman"><br>
+      Last Name: <input type="text" name="lname" value="Ali"><br>
+      <button type="submit" value="Submit"> Sumbmit </button>
+      <p id="demo"></p>
+  </form>
+         
+    <script>
+        const x = document.forms["form1"];
+        let text = "";
+        for(let i = 0; i< x.length; i++){
+            text += x.element[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

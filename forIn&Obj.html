@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            fname:"farman",
+            lname:"ali",
+            age:23,
+            education:"sofware Engr.",
+            gender:"male",
+            hight:"234cm"
+        };
+        delete person.hight;//deleting existing peroperty
+        person.nationality="pakistani";//adding new property
+        for(let x in person){
+            document.write(x + " =>"+ person[x]+"<br>");
+        }
+    </script>
+</body>
+</html>

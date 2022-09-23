@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+     const myObj={
+         fname:"farman",
+         lname:"ali",
+         age:23,
+         cars:{
+             car1:"BMW",
+             car2:"Farari",
+             car3:"HOnda"
+         }
+
+     };
+     document.write(myObj.cars.car2 + "<br>");//1st method to access nested Objects values
+    document.write(myObj.cars["car2"] + "<br>");//second method to access nested Objects values
+     document.write(myObj["cars"]["car2"] + "<br>");//third method to access nested Objects values
+ </script>
+</body>
+</html>

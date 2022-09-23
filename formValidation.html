@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="demo">
+      <p id="para1">This is first Para</p>
+      <p id="para2">This is second Para</p>
+  </div>
+  <script>
+      const Name = document.createElement("h1");
+      const node = document.createTextNode("Engr. Farman Ali");
+      Name.appendChild(node);
+      const element = document.getElementById("demo");
+      const child = document.getElementById("para1");
+      //element.appendChild(Name);
+      //second method
+      element.insertBefore(Name, child);
+  </script>
+</body>
+</html>

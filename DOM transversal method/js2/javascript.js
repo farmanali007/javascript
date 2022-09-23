@@ -1,0 +1,30 @@
+// var a=document.getElementById("Inner").parentElement.style.background="green";
+// var a=document.getElementById("Inner").parentElement;
+// console.log(a);
+// var a=document.getElementById("child").parentElement.style.background="pink";
+// var a=document.getElementById("child").parentElement;
+// var a=document.getElementById("child").parentNode.style.background="pink";
+// var a=document.getElementById("child").parentNode;
+// console.log(a);
+//var a=document.getElementById("main").parentNode;
+// var a=document.getElementById("Inner").children[2].style.background="red";
+// var a=document.getElementById("Inner").children;
+// document.getElementById("Inner").firstElementChild.style.background="black";
+// var a=document.getElementById("Inner").firstElementChild;
+// document.getElementById("Inner").lastElementChild.style.background="black";
+// var a=document.getElementById("Inner").lastElementChild;
+// document.getElementById("child").nextElementSibling.style.background="black";
+// var a=document.getElementById("Inner").nextElementSibling;
+// document.getElementById("child").previousElementSibling.style.background="black";
+// var a=document.getElementById("Inner").previousElementSibling;
+// console.log(a);
+
+
+var newElement=document.createElement("h2");
+var newText=document.createTextNode("farman");
+//var newComment=document.createComment("coment");
+newElement.appendChild(newText);
+document.getElementById("child").appendChild(newElement);
+console.log(newElement);
+console.log(newText);
+//console.log(newComment);

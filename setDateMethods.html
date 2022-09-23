@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setDateMethod</title>
+</head>
+<body>
+  <div style="background-color: black;
+    color: aliceblue;
+
+    font-family: "Courier New", Courier, monospace;
+    padding: 10px auto 0;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;">
+        <h1 style="margin-left: 40%;" >Engr.Farman Ali Gorayah</h1>
+        <h2 style="margin-left: 42%;"> Date Method:setDateMethods</h2>
+      </div>
+
+
+
+<script>
+var now=new Date();
+document.write(now+"<br>");
+now.setDate(20);
+document.write(now+"<br>");
+now.setFullYear(2020);
+document.write(now+"<br>");
+now.setMonth(6);
+document.write(now+"<br>");
+var now2=new Date();
+document.write(now2.getDate() +"/" + now2.getMonth() + "/" + now2.getFullYear());
+
+
+</script>
+
+</body>
+</html>

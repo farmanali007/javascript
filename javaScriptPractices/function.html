@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = function (a, b) {
+        //function store in a variable, has no need function "name".
+        return a * b;
+      };
+      document.write(x(3, 4)); //it can be accessed by variable name
+
+      //////////self invoked Function?///////////anonymous self invoked function///
+      (function () {
+        document.write("<br>helo i called my self!");
+      })();
+
+      ////////Function as value////////
+      function sum(a, b) {
+        return a + b;
+      }
+      document.write("<br>" + sum(3.4, 5.3));
+
+      //Functions are Objects
+
+      // The typeof operator in JavaScript returns "function" for functions.
+
+      // But, JavaScript functions can best be described as objects.
+
+      // JavaScript functions have both properties and methods.
+
+      // The arguments.length property returns the number of arguments received when the function was invoked:
+
+      function sub(a, b) {
+        return arguments.length;
+      }
+      document.write("<br>" + window.sub(12, 8)); //function invocation with window object
+
+      //          Arrow Functions
+      // Arrow functions allows a short syntax for writing function expressions.
+
+      // You don't need the function keyword, the return keyword, and the curly brackets.
+      let f = (a, b) => a * b; //You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:
+      document.write("<br>" + f(3, 6));
+
+      //Arrow Function Method-2///
+      let func = (a, b) => {
+        var z = a * b;
+        var y = b - a;
+        return z + y;
+      };
+      document.write("<br>" + func(3, 8));
+
+      //                 /////Default Parameters////////////
+      // If a function is called with missing arguments (less than declared), the missing values are set to undefined.
+
+      // Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter:
+      function myfucnction(a, b) {
+        if (b === undefined) {
+          b = 2;
+        }
+        return a * b;
+      }
+      document.write("<br>" + myfucnction(4));
+
+      //   The Arguments Object
+      // JavaScript functions have a built-in object called the arguments object.
+
+      // The argument object contains an array of the arguments used when the function was called (invoked).
+
+      // This way you can simply use a function to find (for instance) the highest value in a list of numbers:
+
+      let myFunc = findMax(2, 32, 43, 53, 66, 9); //function call
+      document.write("<br>" + myFunc);
+      function findMax() {
+        let max = -Infinity;
+        for (var i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i];
+          }
+        }
+        return max;
+      }
+
+      //  ///////Invoking a Function as a Method/////
+
+      // In JavaScript you can define functions as object methods.
+
+      // The following example creates an object (myObject), with two properties (firstName and lastName), and a method (fullName):
+      const myObj = {
+        fname: "farman",
+        lName: "ali",
+        fullName: function () {
+          return this.fname + " " + this.lName;
+        },
+      };
+      document.write("<br>" + myObj.fullName()); //calling a function as object method////////
+
+      //            Invoking a Function with a Function Constructor
+      // If a function invocation is preceded with the new keyword, it is a constructor invocation.
+
+      // It looks like you create a new function, but since JavaScript functions are objects you actually create a new object:
+
+      function myFunction(arg1, arg2) {
+        ////fucntion constructor
+        this.firstName = arg1;
+        this.lastName = arg2;
+      }
+      const myObje = new myFunction("farman", "ali");
+      document.write("<br>" + myObje.firstName);
+
+      //                 The JavaScript call() Method
+
+      // The call() method is a predefined JavaScript method.
+
+      // It can be used to invoke (call) a method with an owner object as an argument (parameter).
+
+      // With call(), an object can use a method belonging to another object.
+
+      // This example calls the fullName method of person, using it on person1:
+
+      const person = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      const person1 = {
+        firstName: "farman",
+        lastName: "ali",
+      };
+      const person2 = {
+        firstName: "Haider",
+        lastName: "ali",
+      };
+      let name = person.fullName.call(person2);
+      document.write("<br>" + name);
+
+      //call method use arguments/////////////
+
+      const man = {
+        fullName: function (city, country) {
+          return this.firstName + " " + this.lastName + city + " " + country;
+        },
+      };
+      const man1 = {
+        firstName: "farman",
+        lastName: "ali",
+      };
+      const man2 = {
+        firstName: "Haider",
+        lastName: "ali",
+      };
+      let manName = man.fullName.call(man2, " lahore", " Pakisatan");
+      document.write("<br>" + manName);
+
+      //                 The JavaScript apply() Method
+      // The apply() method is similar to the call() method (previous chapter).
+
+      // In this example the fullName method of person is applied on person1:
+
+      const woman = {
+        fullName: function (city, country) {
+          return this.firstName + " " + this.lastName + city + " " + country;
+        },
+      };
+      const woman1 = {
+        firstName: "rukiya",
+        lastName: "bibi",
+      };
+      const woman2 = {
+        firstName: "fatima",
+        lastName: "akhtar",
+      };
+      let womanName = man.fullName.apply(woman2, [" lahore", " Pakisatan "]);
+      document.write("<br>" + womanName);
+//                         The Difference Between call() and apply()
+// The difference is:
+
+// The call() method takes arguments separately.
+
+// The apply() method takes arguments as an array.
+
+// The apply() method is very handy if you want to use an array instead of an argument list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////// Function Borrowing///////////////////////////
+// With the bind() method, an object can borrow a method from another object.
+
+// The example below creates 2 objects (person and member).
+
+// The member object borrows the fullname method from the person object:
+   
+
+const product = {
+    firstName:"huwawai",
+    lastName: "x23",
+    fullName: function (){
+        return this.firstName + " " + this.lastName;
+    }
+     
+}
+
+const product2 = {
+    firstName: "iphone",
+    lastName: "pro-max"
+}
+ 
+
+   let phoneName = product.fullName.bind(product2);
+   document.write("<br>" + phoneName());
+
+
+
+
+
+    </script>
+  </body>
+</html>

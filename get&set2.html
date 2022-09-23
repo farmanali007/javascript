@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {counter:0};
+        //define some getters and setter to the obj outside the Object
+        Object.defineProperty(obj, "resest",{
+            get: function () {this.counter=0;}
+        });
+        Object.defineProperty(obj, "increment",{
+            get: function () {this.counter++;}
+        });
+        Object.defineProperty(obj, "decrement",{
+            get: function () {this.counter--;}
+        });
+        Object.defineProperty(obj, "add",{
+            set: function (value) {this.counter += value;}
+        });
+        Object.defineProperty(obj, "sub",{
+            set: function (value) {this.counter-=value;}
+        });
+        obj.rest;
+        document.write(obj.counter + "<br>");
+        obj.add=34;
+        document.write(obj.counter + "<br>");
+        obj.increment;
+        document.write(obj.counter + "<br>");
+        obj.decrement;
+        document.write(obj.counter + "<br>");
+        obj.sub=10;
+        document.write(obj.counter + "<br>");
+
+
+    </script>
+</body>
+</html>

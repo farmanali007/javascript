@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //cosnturctor Functions
+        function persong(name,age,cast){
+            this.name=name;
+            this.age=age;
+            this.cast=cast;
+        }
+        const myFather = new persong('bahadar ali', 67, 'jutt');
+        const myTeacher = new persong('Prof.Asif', 37, 'Arian');
+        document.write( "<h1>"+ "my Father " + myFather.name + " "+ myFather.cast + " is " + myFather.age + " year old " + "</h1>");
+        document.write("<h1>"+ "my Teacher " + myTeacher.name + " "+ myTeacher.cast + " is " + myTeacher.age + " year old " + "</h1>");
+        //adding a peroperty to an existing object
+        myFather.nationality="pakistani";
+        //display nationality
+        document.write(myFather.nationality + "<br>");
+     
+
+        //////adding a method to and exiting object
+        myFather.totalDays= function(){
+            return this.age*12*365;
+        }
+
+        document.write(myFather.totalDays() + " Days my father spend ");
+    </script>
+</body>
+</html>

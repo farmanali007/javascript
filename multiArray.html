@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Array</title>
+</head>
+<body>
+    <div style="background-color: black;
+    color: aliceblue;
+    
+    font-family: "Courier New", Courier, monospace;
+    padding: 10px auto 0;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;">
+        <h1 style="margin-left: 40%;" >Egg.Farman Ali Gorayah</h1>
+        <h2 style="margin-left: 42%;"> Multi.D arrays  in javascript</h2>
+      </div>
+
+      <script>
+           var ary=[
+               ["farman",23,"male","software Engr.",34,"farman ali goraya"],
+               ["sheera",25,"others","HTML Koder",34,"farman ali goraya"],
+               ["harry",24,"male","python developer",34,"farman ali goraya"],
+               ["walker",33,"male","severSide script",34,"farman ali goraya"],
+               ["walker",33,"male","severSide script",34,"farman ali goraya"],
+               ["walker",33,"male","severSide script",34,"farman ali goraya"],
+               ["walker",33,"male","severSide script",34,"farman ali goraya"]
+               ];
+               document.write(ary.length);
+               document.write("<table border='8px' cellspacing='20'");
+               for(var a=0;a<ary.length;a++){
+                   document.write("<tr>");
+                   for(b=0;b<ary[a].length; b++){
+               document.write("<td>"+ary[a][b]+"</td>");
+                   }
+                   document.write("<br>");
+                   document.write("</tr>")
+
+               }
+               document.write("</table>");
+
+      </script>
+</body>
+</html>

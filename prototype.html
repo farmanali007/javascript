@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The JavaScript prototype property also allows you to add new methods to objects constructors: -->
+     <script>
+        function person(first,last,age,sallary){
+            this.firstName=first;
+            this.lastName=last;
+            this.age=age;
+            this.sallary=sallary;
+        }
+        const Teacher = new person("farman","ali",34,34343);
+        for(let x in Teacher){
+            document.write(Teacher[x] +" ");
+        }
+             
+             document.write("<br><br>");
+             
+             
+             //adding a property of of Object otuside the object using prototype key word.
+             person.prototype.nationality="english";
+             for(let x in Teacher){
+                 document.write(Teacher[x] +" ");
+                }
+                
+                
+                document.write("<br><br>");
+
+        //adding a method() of of Object otuside the object using prototype key word.
+        person.prototype.fullName = function (){
+            return this.firstName + " " + this.lastName;
+        }
+            document.write(Teacher.fullName());
+        // }
+        // for(let x in Teacher){
+        //     document.write(Teacher[x] +" ");
+        // }
+     </script>
+
+</body>
+</html>

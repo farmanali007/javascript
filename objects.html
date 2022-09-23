@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <div style="background-color: black;
+    color: aliceblue;
+    
+    font-family: "Courier New", Courier, monospace;
+    padding: 10px auto 0;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;">
+        <h1 style="margin-left: 40%;" >Engr.Farman Ali Gorayah</h1>
+        <h2 style="margin-left: 42%;">objects in javascript</h2>
+      </div>
+
+
+
+      <script>
+          a={
+              fname: "farman",
+              lname: "ali",
+              age: 23,
+              email: "farmanali1588594@gmail.com",
+              favlang: ["c++","php","python"],
+              sallary: function(){
+                  return 3433;
+              },
+              fullname: function(){
+                  return this.fname+" "+this.lname;
+              },
+              b:{
+                  'name':"walker",
+                  'country': "america"
+              }
+          }
+          document.write(a.fname+"<br>" );
+          document.write(a.email+"<br>");
+          document.write(a.age+"<br>");
+          document.write(a.favlang+"<br>");
+          document.write(a.favlang[2]+"<br>");
+          document.write(a.sallary()+"<br>");
+          document.write(a.fullname()+"<br>");
+          document.write(a.b.name+"<br>");
+          document.write(a.b.country+"<br>");
+            console.log(a);
+            console.log(a.fname);
+
+      </script>
+</body>
+</html>

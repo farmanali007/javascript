@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>mapMethod</title>
+</head>
+<body>
+  <div style="background-color: black;
+    color: aliceblue;
+
+    font-family: "Courier New", Courier, monospace;
+    padding: 10px auto 0;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;">
+        <h1 style="margin-left: 40%;" >Engr.Farman Ali Gorayah</h1>
+        <h2 style="margin-left: 42%;"> MapMethod </h2>
+      </div>
+
+
+
+<script>
+  var ary=[2,3,5,6];
+  var b=ary.map(test);
+  document.write(b+"<br>");
+  function test(x){
+    return x*20;
+  }
+    var a=[
+{fname: "farman",lname:"ali"},
+{fname: "umar",lname:"akamal"},
+{fname: "shahid",lname:"afridi"},
+{fname: "imran",lname:"khan"}
+    ];
+    var c=a.map(fullname);
+    document.write(c);
+    function fullname(v){
+      return v.fname+v.lname;
+    }
+
+</script>
+</body>
+</html>

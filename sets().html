@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const letters = new Set(["a","d","b"]);
+        letters.add("f");//Add value or element
+        letters.add("h");//Add value
+        let a="m";
+        let b="n";
+        letters.add(a);//Add variable 
+        letters.add(b);//Add variable
+        document.write(letters.size + " size of set<br>values are given below");//to find size of set
+
+
+
+        ///////////ForEach Method//////////
+        var text="";
+        letters.forEach(function(value){
+               text+=value + "<br>";
+        })
+        document.write(text);
+
+        ///////////valuesOf()//////////
+        for(let x of letters.values()){
+            document.write(x+" ");
+        }
+  
+</script>
+
+  
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myObj={
+            fname:"farman",
+            lname:"ali",
+            age:23,
+            cars:[
+                {name:"BMW", models:["First","Second","third"]},
+                {name:"Farari", models:[2012,2023,2011]},
+                {name:"Honda", models:["civic","city","fortunier"]}
+            ]
+        };
+        var text="";
+        for(let x in myObj.cars){
+                 text+= "<h1>" + myObj.cars[x].name + "</h1>"; 
+                 for(let j in myObj.cars[x].models){
+                     text+=myObj.cars[x].models[j] + "<br>";
+                 }
+        }
+           document.write(text);
+    </script>
+</body>
+</html>

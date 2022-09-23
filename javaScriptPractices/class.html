@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+       //  A JavaScript class is not an object.It is a template for JavaScript objects.
+
+         class car {
+              constructor(name, year){
+                  this.name = name;
+                  this.year = year;
+              }
+              age(){///create a method inside teh class
+                  let date = new Date();
+                  return date.getFullYear() - this.year;
+              };
+         }
+         const car1 = new car("farari", 2012);//creat a object car1
+         const car2 = new car("bmw", 2004);
+         document.write(car2.age() + " car age <br>");
+
+
+
+
+                  ///////////second Method////////\
+
+
+                  class bus {
+              constructor(name, year){
+                  this.name = name;
+                  this.year = year;
+              }
+              age(x){///receive parameters 
+                  return x - this.year;
+              };
+         }
+         const bus1 = new bus("niazi express", 2010);//creat a object bus1
+         const bus2 = new bus("deweoo", 2006);
+         let date = new Date();
+         let year = date.getFullYear();
+         document.write(bus2.age(year) + " bus age <br>");
+
+
+
+
+
+
+
+
+
+//////////////////////class inheritance///////////////
+
+ class bike{
+     constructor (brand){
+         this.carname = brand;
+     }
+     present(){
+         return "i have a " + this.carname;
+     }
+ }
+   
+   class model extends bike {/////inherit class
+       constructor (brand, mod){
+           super(brand);
+           this.model = mod;
+       }
+       show(){
+            return this.present() + " , it is a " + this.model;
+       }
+   }
+    let mybike = new model("zimko", "cd-70");
+    document.write(mybike.show() + "<br>");
+
+
+
+
+
+
+
+
+
+
+    // Static class methods are defined on the class itself.
+
+// You cannot call a static method on an object, only on an object class.
+//    class rikshaw {
+//        constructor (name){
+//            this.name = name;
+//        }
+//        static hello(){
+//            return "hello";
+//        }
+//    }
+    
+//    let myRikshaw = new rikshaw("auto");
+//    document.write(rikshaw.hello());//call a static method on the rikshaw class not on myRikshaw object
+
+
+   ///To use the "myCar" object inside the static method, you can send it as parameter.
+
+class rikshaw {
+       constructor (name){
+           this.name = name;
+       }
+       static hello(x){
+           return "hello" + x.name;
+       }
+   }
+    
+   let myRikshaw = new rikshaw(" auto ");
+   document.write(rikshaw.hello(myRikshaw));
+  
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>

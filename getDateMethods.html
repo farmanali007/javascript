@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>toDateMethod</title>
+</head>
+<body>
+  <div style="background-color: black;
+    color: aliceblue;
+
+    font-family: "Courier New", Courier, monospace;
+    padding: 10px auto 0;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;">
+        <h1 style="margin-left: 40%;" >Engr.Farman Ali Gorayah</h1>
+        <h2 style="margin-left: 42%;"> Date Method:toDateMethod();</h2>
+      </div>
+
+
+
+<script>
+var now=new Date();//new Date Method return us date and time from our pc not sever
+var now2=new Date('5 january 2010');
+document.write(now+"<br>");
+document.write(now.toDateString()+"<br>");//toDateString return us only full date without time
+document.write(now.getDate()+"<br>");//return only date (OnlyDay)
+document.write(now.getFullYear()+"<br>");//return full year
+document.write(now.getDay()+"<br>");//return dayN0.//sunday==0 and so on
+document.write(now.getMonth()+"<br>");//return Month No.//jan==0 and fab==1 and so on.....
+document.write(now2.getFullYear()+"<br>");
+
+</script>
+
+</body>
+</html>

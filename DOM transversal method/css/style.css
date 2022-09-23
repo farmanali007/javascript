@@ -1,0 +1,32 @@
+#outer {
+  margin: 100px auto 0;
+  width: 1000px;
+  height: 500px;
+  background-color: beige;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Inner {
+  width: 800px;
+  height: 400px;
+  background-color: rgb(186, 236, 110);
+  text-align: center;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.alpha {
+  width: 200px;
+  height: 100px;
+  background-color: chocolate;
+  text-align: center;
+  margin: 11px;
+  
+
+}
